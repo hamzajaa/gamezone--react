@@ -25,7 +25,7 @@ export default function App() {
 
   if (fontsLoaded) {
     return (
-      <Home /> // 3- show Home screen
+      <Navigator /> // 3- show Home screen
     );
   } else {
     return (
