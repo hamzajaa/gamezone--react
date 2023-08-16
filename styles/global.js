@@ -4,6 +4,7 @@ export const globalStyle = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
+        fontFamily: 'nunito-bold',
     },
     titleText: {
         fontFamily: 'nunito-bold',
@@ -13,5 +14,5 @@ export const globalStyle = StyleSheet.create({
     paragraph: {
         marginVertical: 8,
         lineHeight: 20,
-    }
+    },
 })

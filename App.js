@@ -1,9 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
-import Home from './screens/home';
 import { useState } from 'react';
 import AppLoading from 'expo-app-loading';
-import  Navigator from './routes/homeStack'
+import RootDraweNavigator from './routes/drawer';
+import { Navigator } from './routes/homeStack'
+import Home from './screens/home';
+import { NavigationContainer } from '@react-navigation/native';
 
 // const getFont = () => {
 //   return Font.loadAsync({
@@ -20,19 +22,20 @@ const getFonts = () => Font.loadAsync({
 
 
 export default function App() {
-  
+
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   if (fontsLoaded) {
     return (
-      <Navigator /> // 3- show Home screen
+        <RootDraweNavigator /> //* 3- show Home screen */}
     );
   } else {
     return (
+        // <RootDraweNavigator />
       <AppLoading
         startAsync={getFonts}// 1- wait to get fonts
         onFinish={() => setFontsLoaded(true)} // 2- set font
-        onError={(err)=>console.log(err)}
+        onError={(err) => console.log(err)}
       />
     );
   }
