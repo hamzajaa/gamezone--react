@@ -3,7 +3,7 @@ import * as Font from 'expo-font';
 import Home from './screens/home';
 import { useState } from 'react';
 import AppLoading from 'expo-app-loading';
-import {Navigator} from './routes/homeStack'
+import  Navigator from './routes/homeStack'
 
 // const getFont = () => {
 //   return Font.loadAsync({
@@ -29,12 +29,11 @@ export default function App() {
     );
   } else {
     return (
-      <Home/>
-      // <AppLoading
-      //   startAsync={getFonts}// 1- wait to get fonts
-      //   onFinish={() => setFontsLoaded(true)} // 2- set font
-      //   onError={(err)=>console.log(err)}
-      // />
+      <AppLoading
+        startAsync={getFonts}// 1- wait to get fonts
+        onFinish={() => setFontsLoaded(true)} // 2- set font
+        onError={(err)=>console.log(err)}
+      />
     );
   }
 
