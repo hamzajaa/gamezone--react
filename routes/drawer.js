@@ -2,8 +2,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { AboutStack } from "./aboutStack";
 import { HomeStack } from "./homeStack"
 import { NavigationContainer } from "@react-navigation/native";
-import About from "../screens/about";
-import Home from "../screens/home";
+
 
 const Drawer = createDrawerNavigator();
 const RootDraweNavigator = () => {
